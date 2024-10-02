@@ -11,5 +11,7 @@ int main() {
   int fib_result = fib(10);
   printf("The 10th number in fib = %d\n", fib_result);
 
+  looping();
+
   return 0;
 }
