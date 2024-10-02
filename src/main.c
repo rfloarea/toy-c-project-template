@@ -15,5 +15,7 @@ int main() {
 
   fizzbuzz(20);
 
+  structs();
+
   return 0;
 }

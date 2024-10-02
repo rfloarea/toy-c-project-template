@@ -40,3 +40,16 @@ void fizzbuzz(int n) {
     }
   }
 }
+
+struct Dog {
+  char name[4];
+  int age;
+};
+
+void structs() {
+  struct Dog lou = {"Lou", 8};
+  struct Dog pal = {.name = "Pal", .age = 4};
+
+  printf("I'm a dog! My name is %s and I'm %d years old.\n", lou.name, lou.age);
+  printf("I'm a dog! My name is %s and I'm %d years old.\n", pal.name, pal.age);
+}
