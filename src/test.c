@@ -26,9 +26,16 @@ TEST(test_string_assert) {
   ASSERT_STR_EQ("hello", "hello");
 }
 
+TEST(test_mul) {
+  ASSERT(mul(4, 2) == 8);
+  ASSERT(mul(0, 2) == 0);
+  ASSERT(mul(-1, 2) == -2);
+}
+
 int main() {
   // Add a `RUN_TEST` line for each test function
   RUN_TEST(test_add);
   RUN_TEST(test_string_assert);
+  RUN_TEST(test_mul);
   return failed;
 }
