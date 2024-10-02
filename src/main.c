@@ -7,5 +7,9 @@ int main() {
 
   int mul_result = mul(4, 2);
   printf("4 * 2 = %d\n", mul_result);
+
+  int fib_result = fib(10);
+  printf("The 10th number in fib = %d\n", fib_result);
+
   return 0;
 }

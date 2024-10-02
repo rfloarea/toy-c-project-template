@@ -32,10 +32,19 @@ TEST(test_mul) {
   ASSERT(mul(-1, 2) == -2);
 }
 
+TEST(test_fib) {
+  ASSERT(fib(5) == 5);
+  ASSERT(fib(8) == 21);
+  ASSERT(fib(1) == 1);
+  ASSERT(fib(0) == 0);
+  ASSERT(fib(-5) == -5);
+}
+
 int main() {
   // Add a `RUN_TEST` line for each test function
   RUN_TEST(test_add);
   RUN_TEST(test_string_assert);
   RUN_TEST(test_mul);
+  RUN_TEST(test_fib);
   return failed;
 }
