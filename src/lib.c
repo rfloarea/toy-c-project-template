@@ -25,3 +25,18 @@ void looping() {
     printf("%d\n", n);
   }
 }
+
+void fizzbuzz(int n) {
+  puts("Let's play fizzbuzz!");
+  for (int i = 1; i <= n; i++) {
+    if (i % 15 == 0) {
+      puts("fizzbuzz");
+    } else if (i % 3 == 0) {
+      puts("fizz");
+    } else if (i % 5 == 0) {
+      puts("buzz");
+    } else {
+      printf("%d\n", i);
+    }
+  }
+}

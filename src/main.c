@@ -13,5 +13,7 @@ int main() {
 
   looping();
 
+  fizzbuzz(20);
+
   return 0;
 }
