@@ -17,5 +17,10 @@ int main() {
 
   structs();
 
+  // this creates a fizzbuzz to a string and prints
+  char buffer[1000] = {0};
+  fizzbuzz_string_buff(buffer, sizeof(buffer), 30);
+  printf("fizzbuzz: %s\n", buffer);
+
   return 0;
 }

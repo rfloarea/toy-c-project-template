@@ -40,11 +40,18 @@ TEST(test_fib) {
   ASSERT(fib(-5) == -5);
 }
 
+TEST(test_concat) {
+  char result[5] = {0};
+  my_strcat(result, sizeof(result), "hi", "ya");
+  ASSERT_STR_EQ(result, "hiya");
+}
+
 int main() {
   // Add a `RUN_TEST` line for each test function
   RUN_TEST(test_add);
   RUN_TEST(test_string_assert);
   RUN_TEST(test_mul);
   RUN_TEST(test_fib);
+  RUN_TEST(test_concat);
   return failed;
 }

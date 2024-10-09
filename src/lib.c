@@ -53,3 +53,35 @@ void structs() {
   printf("I'm a dog! My name is %s and I'm %d years old.\n", lou.name, lou.age);
   printf("I'm a dog! My name is %s and I'm %d years old.\n", pal.name, pal.age);
 }
+
+void my_strcat(char *buffer, size_t buflen, char *a, char *b) {
+  snprintf(buffer, buflen, "%s%s", a, b);
+}
+
+// utility to check for success of snprintf
+char snprintf_success(int check, int buflen) {
+  return check >= 0 && check < buflen;
+}
+
+void fizzbuzz_string_buff(char *buffer, size_t buflen, int upto) {
+  for (int i = 1; i <= upto; i++) {
+    int check = 0;
+    
+    if (i % 15 == 0) {
+      check = snprintf(buffer, buflen, "fizzbuzz, ");
+    } else if (i % 3 == 0) {
+      check = snprintf(buffer, buflen, "fuzz, ");
+    } else if (i % 5 == 0) {
+      check = snprintf(buffer, buflen, "buzz, ");
+    } else {
+      check = snprintf(buffer, buflen, "%d, ", i);
+    }
+    
+    if (!snprintf_success(check, buflen)) return;
+    buffer += check;
+    buflen -= check;
+  }
+  buffer -= 2;
+  buflen -= 2;
+  snprintf(buffer, buflen, ".");
+}
